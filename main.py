@@ -38,8 +38,13 @@ for i in range(0,nr_numbers):
 
 
 final_password=pass_letters+pass_symbols+pass_numbers
-print(f"Generated password:")
-print(*final_password,sep='')
+random.shuffle(final_password)
+
+generated_password=""
+for char in final_password:
+    generated_password+=char
+
+print(f"Generated password:\n{generated_password}")
       
 
 
